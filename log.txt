@@ -1,0 +1,8 @@
+[ALERT] FILE CHANGED: ./test_folder/test_file.txt
+     Old Hash: b2808365d13064801ced331ed75d58b44065fe3384ff2dfe180e039139e5da92
+     New Hash: 014aa37b5c7be6c88dbe0eff58bcf06d8420cf79b51d16e087b1319655fd32ca
+[ALERT] FILE DELETED: ./test_folder/test_file.txt
+[ALERT] NEW FILE DETECTED: ./test_folder/test_file_1.txt
+[ALERT] FILE CHANGED: ./test_folder/test_file_1.txt
+     Old Hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+     New Hash: 02fc65003ca818782a5740b183321366b1682e30de31416b89010526af7c6dc0
