@@ -6,6 +6,12 @@ MONITOR_DIR = "./test_folder"
 BASELINE_FILE = "baseline.txt"
 
 
+def log_event(message):
+    print(message)
+    with open("log.txt", 'a') as file:
+        file.write(message+'\n')
+
+
 def calculate_hash(filepath):
     sha256_hash = hashlib.sha256()
 
@@ -74,17 +80,17 @@ def start_monitoring():
                     continue
 
                 if filepath not in baseline_db:
-                    print(f"[ALERT] NEW FILE DETECTED: {filepath}")
+                    log_event(f"[ALERT] NEW FILE DETECTED: {filepath}")
                     baseline_db[filepath] = current_hash
                 elif baseline_db[filepath] != current_hash:
-                    print(f"[ALERT] FILE CHANGED: {filepath}")
-                    print(f"     Old Hash: {baseline_db[filepath]}")
-                    print(f"     New Hash: {current_hash}")
+                    log_event(f"[ALERT] FILE CHANGED: {filepath}")
+                    log_event(f"     Old Hash: {baseline_db[filepath]}")
+                    log_event(f"     New Hash: {current_hash}")
                     baseline_db[filepath] = current_hash
 
         for filepath in list(baseline_db.keys()):
             if filepath not in current_files_on_disk:
-                print(f"[ALERT] FILE DELETED: {filepath}")
+                log_event(f"[ALERT] FILE DELETED: {filepath}")
                 del baseline_db[filepath]
 
 
