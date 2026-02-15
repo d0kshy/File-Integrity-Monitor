@@ -1,4 +1,10 @@
 # File Integrity Monitor (FIM)
+
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=flat&logo=python)
+![Hashlib](https://img.shields.io/badge/Crypto-SHA--256-lightgrey?style=flat&logo=gnu-privacy-guard&logoColor=black)
+![System](https://img.shields.io/badge/System-File%20Monitoring-yellow?style=flat)
+![Security](https://img.shields.io/badge/Security-Integrity%20Check-red)
+
 A Python-based File Integrity Monitor (FIM) that tracks changes in a target directory. It uses SHA-256 hashing to create a secure baseline and detects file creations, deletions, and content modifications.
 
 # Simple Scheme
